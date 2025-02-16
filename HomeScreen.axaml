@@ -1,0 +1,19 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" 
+        x:Class="java_ide.HomeScreen"
+        Title="Home"
+        Width="400" Height="600" MinWidth="300" MinHeight="500">
+        
+        <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Height="65">
+                        <Button Content="New Project" Width="120" Margin="10" HorizontalContentAlignment="Center"/>
+                        <Button Content="Open Project" Width="120" Margin="10" HorizontalContentAlignment="Center"/>
+                </StackPanel>
+        
+                <ListBox x:Name="ProjectsList" DockPanel.Dock="Bottom" Margin="10"/>
+        </DockPanel>
+        
+</Window>
