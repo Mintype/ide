@@ -1,4 +1,5 @@
-﻿using Avalonia;
+﻿using System;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
@@ -6,12 +7,16 @@ namespace java_ide;
 
 public partial class SecondWindow : Window
 {
+    private string _folderPath;
     public SecondWindow()
     {
         InitializeComponent();
     }
-    private void InitializeComponent()
+    
+    public SecondWindow(string folderPath)
     {
-        AvaloniaXamlLoader.Load(this);
+        _folderPath = folderPath;
+        Console.WriteLine("FolderPath: " + _folderPath);
+        InitializeComponent();
     }
 }

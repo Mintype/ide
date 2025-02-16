@@ -10,10 +10,10 @@
         <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                 <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Height="65">
                         <Button Content="New Project" Width="120" Margin="10" HorizontalContentAlignment="Center"/>
-                        <Button Content="Open Project" Width="120" Margin="10" HorizontalContentAlignment="Center"/>
+                        <Button Content="Open Project" Width="120" Margin="10" HorizontalContentAlignment="Center" Click="OpenFolderButton_Click"/>
                 </StackPanel>
         
-                <ListBox x:Name="ProjectsList" DockPanel.Dock="Bottom" Margin="10"/>
+                <ListBox x:Name="ProjectsList" DockPanel.Dock="Bottom" Margin="10" SelectionChanged="ProjectsList_SelectionChanged"/>
         </DockPanel>
         
 </Window>
