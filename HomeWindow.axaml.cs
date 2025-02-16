@@ -8,12 +8,12 @@ using Newtonsoft.Json;
 
 namespace java_ide;
 
-public partial class HomeScreen : Window
+public partial class HomeWindow : Window
 {
     private const string FolderPathsFile = "folderPaths.json"; // File to store the paths
     private FolderPaths _folderPaths;
     
-    public HomeScreen()
+    public HomeWindow()
     {
         InitializeComponent();
         LoadFolderPaths();
@@ -66,8 +66,8 @@ public partial class HomeScreen : Window
             _folderPaths.Paths.Add(path);
             SaveFolderPaths();
             
-            // Create and open the second window with the path
-            OpenSecondWindow(path);
+            // Create and open the editor window with the path
+            OpenEditorWindow(path);
         }
         else
         {
@@ -75,10 +75,10 @@ public partial class HomeScreen : Window
         }
     }
     
-    private void OpenSecondWindow(String path)
+    private void OpenEditorWindow(String path)
     {
-        var secondWindow = new SecondWindow(path);
-        secondWindow.Show();  // Show the second window
+        var editorWindow = new EditorWindow(path);
+        editorWindow.Show();  // Show the editor window
         this.Close();  // Close the current window
     }
 
@@ -95,6 +95,6 @@ public partial class HomeScreen : Window
 
         if (path == null) return;
         
-        OpenSecondWindow(path);
+        OpenEditorWindow(path);
     }
 }

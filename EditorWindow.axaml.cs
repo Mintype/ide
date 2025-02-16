@@ -5,15 +5,20 @@ using Avalonia.Markup.Xaml;
 
 namespace java_ide;
 
-public partial class SecondWindow : Window
+public partial class EditorWindow : Window
 {
     private string _folderPath;
-    public SecondWindow()
+    public EditorWindow()
     {
         InitializeComponent();
     }
-    
-    public SecondWindow(string folderPath)
+
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
+    }
+
+    public EditorWindow(string folderPath)
     {
         _folderPath = folderPath;
         Console.WriteLine("FolderPath: " + _folderPath);
